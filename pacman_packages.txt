@@ -1,0 +1,7 @@
+git
+man-db
+man-pages
+neovim
+openssh
+sudo
+texinfo

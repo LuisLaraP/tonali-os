@@ -4,6 +4,10 @@
 #
 # License: MIT
 
+# Install pacman packages
+
+pacman -Sy --needed - < pacman_packages.txt
+
 # Create main user
 
 read -p "Enter main user name: " main_user

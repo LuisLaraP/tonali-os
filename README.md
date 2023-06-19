@@ -12,6 +12,10 @@ Then, inside your fresh Arch install, run the following commands as root:
 	cd tonali-os
 	./install.sh
 
-The script will ask for some information and complete the installation. After it completes, reboot to see the changes:
+The installation script will first install the packages contained in `pacman_packages.txt` using pacman, skipping those already installed. You can modify this file to add packages you want. Removing packages is not recommended.
+
+The next step is to create the main user. The script will ask for the main user name and create it or adjust its configuration if it already exists. If the user is created, you will be asked to set a password for it.
+
+After installation completes, reboot to see the changes:
 
 	reboot
