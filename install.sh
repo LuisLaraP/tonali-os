@@ -4,6 +4,7 @@
 #
 # License: MIT
 
+dotfiles_installer_url='https://raw.githubusercontent.com/LuisLaraP/dotfiles/main/install.sh'
 sysconfig_repo_url='git@github.com:LuisLaraP/linux-config.git'
 
 
@@ -27,11 +28,21 @@ else
 fi
 
 
+# Deploy main user dotfiles
+
+dotfiles_installer=$(mktemp)
+curl $dotfiles_installer_url > $dotfiles_installer
+chmod 700 $dotfiles_installer
+chown $main_user $dotfiles_installer
+sudo -u $main_user $dotfiles_installer
+
+
 # Install system configuration files
 
-sysconfig_repo_dir=$(mktemp --tmpdir --directory tmp.XXXXXXXXXX)
+sysconfig_repo_dir=$(mktemp --directory)
 git clone $sysconfig_repo_url $sysconfig_repo_dir
 $sysconfig_repo_dir/install.sh
+
 
 # Final actions
 
