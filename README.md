@@ -2,6 +2,11 @@
 
 My personal Linux distribution, in the form of a post-installation script on top of Arch Linux.
 
+## Features
+
+- Create main user.
+- Sync system configuration files from a git repository.
+
 ## Installation
 
 TonaliOS is meant to be installed on top of a clean Arch Linux install. Installing Arch is outside of the scope of this project, but you can follow the [official guide](https://wiki.archlinux.org/title/Installation_guide).
