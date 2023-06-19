@@ -1,3 +1,4 @@
+dash
 git
 man-db
 man-pages

@@ -32,3 +32,7 @@ fi
 sysconfig_repo_dir=$(mktemp --tmpdir --directory tmp.XXXXXXXXXX)
 git clone $sysconfig_repo_url $sysconfig_repo_dir
 $sysconfig_repo_dir/install.sh
+
+# Final actions
+
+ln -sfT dash /usr/bin/sh

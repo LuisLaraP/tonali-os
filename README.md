@@ -6,6 +6,7 @@ My personal Linux distribution, in the form of a post-installation script on top
 
 - Create main user.
 - Sync system configuration files from a git repository.
+- Use dash as the default POSIX shell.
 
 ## Installation
 
