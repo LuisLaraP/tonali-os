@@ -1,5 +1,6 @@
 dash
 git
+greetd
 man-db
 man-pages
 neovim

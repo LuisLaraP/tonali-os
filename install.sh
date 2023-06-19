@@ -46,4 +46,6 @@ $sysconfig_repo_dir/install.sh
 
 # Final actions
 
+systemctl enable greetd.service
+
 ln -sfT dash /usr/bin/sh

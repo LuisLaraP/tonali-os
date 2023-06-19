@@ -7,7 +7,8 @@ My personal Linux distribution, in the form of a post-installation script on top
 - Create main user.
 - Sync main user dotfiles from a git repository.
 - Sync system configuration files from a git repository.
-- Use dash as the default POSIX shell.
+- Use `dash` as the default POSIX shell.
+- `greetd` as login daemon.
 
 ## Installation
 
