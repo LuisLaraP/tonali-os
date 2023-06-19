@@ -18,12 +18,12 @@ pacman -Sy --needed - < $base_dir/pacman_packages.txt
 # Create main user
 
 read -p "Enter main user name: " main_user
-if useradd -m -G wheel $main_user 2>/dev/null; then
+if useradd -m -G wheel -s /bin/zsh $main_user 2>/dev/null; then
 	echo "Enter the main user password"
 	passwd $main_user
 else
 	echo "User $main_user already exists. Adjusting its configuration."
-	usermod -a -G wheel $main_user
+	usermod -a -G wheel -s /bin/zsh $main_user
 fi
 
 

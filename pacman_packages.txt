@@ -5,3 +5,4 @@ neovim
 openssh
 sudo
 texinfo
+zsh
