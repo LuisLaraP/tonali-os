@@ -4,6 +4,8 @@
 #
 # License: MIT
 
+sysconfig_repo_url='git@github.com:LuisLaraP/linux-config.git'
+
 # Install pacman packages
 
 pacman -Sy --needed - < pacman_packages.txt
@@ -18,3 +20,9 @@ else
 	echo "User $main_user already exists. Adjusting its configuration."
 	usermod -a -G wheel $main_user
 fi
+
+# Install system configuration files
+
+sysconfig_repo_dir=$(mktemp --tmpdir --directory tmp.XXXXXXXXXX)
+git clone $sysconfig_repo_url $sysconfig_repo_dir
+$sysconfig_repo_dir/install.sh
