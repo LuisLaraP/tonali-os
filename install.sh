@@ -6,9 +6,14 @@
 
 sysconfig_repo_url='git@github.com:LuisLaraP/linux-config.git'
 
+
+base_dir=$(dirname $0)
+
+
 # Install pacman packages
 
-pacman -Sy --needed - < pacman_packages.txt
+pacman -Sy --needed - < $base_dir/pacman_packages.txt
+
 
 # Create main user
 
@@ -20,6 +25,7 @@ else
 	echo "User $main_user already exists. Adjusting its configuration."
 	usermod -a -G wheel $main_user
 fi
+
 
 # Install system configuration files
 
