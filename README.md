@@ -16,6 +16,8 @@ The installation script will first install the packages contained in `pacman_pac
 
 The next step is to create the main user. The script will ask for the main user name and create it or adjust its configuration if it already exists. If the user is created, you will be asked to set a password for it.
 
+Then, system configuration files are installed from a remote git repo. If you use this method of syncing files in `/etc`, just put your repo URL in the `sysconfig_repo_url` variable. Otherwise, you can delete this section.
+
 After installation completes, reboot to see the changes:
 
 	reboot
